@@ -1,0 +1,9 @@
+alias,model_version,text,prediction,score,hf_model_id
+champion,1,The biryani at this place was fantastic and the service was quick.,positive,0.9997,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,My order arrived two hours late and the bag was torn.,negative,0.9994,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,The new phone has a gorgeous screen and the battery lasts all day.,positive,0.9988,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,I wasted my money on this laptop; it crashes every single hour.,negative,0.9997,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,The lecture was a little slow at first but ended up being really inspiring.,positive,0.9995,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,Not bad at all for the price.,positive,0.9978,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,The movie was long and the plot made no sense.,negative,0.9998,distilbert-base-uncased-finetuned-sst-2-english
+champion,1,Customer support solved my problem in five minutes. Very impressed.,positive,0.9996,distilbert-base-uncased-finetuned-sst-2-english
