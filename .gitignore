@@ -1,0 +1,12 @@
+mlruns/
+mlartifacts/
+mlflow.db
+*.db
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.pt
+*.bin
+*.safetensors
+.ipynb_checkpoints/
