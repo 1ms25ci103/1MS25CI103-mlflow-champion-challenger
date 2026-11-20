@@ -6,8 +6,8 @@
     "recall": 0.9827586206896551,
     "f1": 0.9743589743589743,
     "macro_f1": 0.9691071980228607,
-    "avg_latency_ms": 68.0965,
-    "total_inference_s": 6.80965
+    "avg_latency_ms": 70.41290000000001,
+    "total_inference_s": 7.041290000000001
   },
   "model_B": {
     "hf_model_id": "siebert/sentiment-roberta-large-english",
@@ -16,13 +16,13 @@
     "recall": 0.9482758620689655,
     "f1": 0.9482758620689655,
     "macro_f1": 0.9384236453201971,
-    "avg_latency_ms": 611.1311,
-    "total_inference_s": 61.11310999999999
+    "avg_latency_ms": 582.7975000000001,
+    "total_inference_s": 58.27975000000001
   },
   "decision": {
     "winner": "A",
     "reason": "guardrail",
     "delta": -0.030683552702663652,
-    "latency_ratio": 8.974486207073783
+    "latency_ratio": 8.276856939566473
   }
 }

@@ -53,8 +53,8 @@ These values live in `config.py` and were not changed after seeing results.
 | recall | 0.983 | 0.948 | -0.034 | higher |
 | f1 | 0.974 | 0.948 | -0.026 | higher |
 | macro_f1 | 0.969 | 0.938 | -0.031 | higher |
-| avg_latency_ms | 68.1 | 611.1 | +543.0 | lower |
-| total_inference_s | 6.8 | 61.1 | +54.3 | lower |
+| avg_latency_ms | 70.4 | 582.8 | +512.4 | lower |
+| total_inference_s | 7.0 | 58.3 | +51.2 | lower |
 <!-- RESULTS_END -->
 
 Plots are in `outputs/` and in the MLflow runs. Five examples where the models disagree are in `outputs/disagreements.csv`.
@@ -62,7 +62,7 @@ Plots are in `outputs/` and in the MLflow runs. Five examples where the models d
 ## 5. Decision
 
 <!-- DECISION_START -->
-Model A (distilbert-base-uncased-finetuned-sst-2-english) started as the Champion and Model B (siebert/sentiment-roberta-large-english) as the Challenger. On 100 SST-2 validation sentences, A scored a macro-F1 of 0.969 and B scored 0.938, so the Challenger did not improve on the Champion. It was 3.1 percentage points worse, while my rule required it to be at least 2 points better. B was also much slower: 611 ms per sentence against 68 ms for A, about 9 times slower, which breaks my 5x latency guardrail. Either condition alone keeps A as the Champion, so the decision is clear. With only 100 sentences, one sentence is worth 1 point, so a 3-point gap is only about three sentences. That is a small sample, and the gap could shrink or grow on a larger test set. The trade-offs also favour A: it is about five times smaller (roughly 67M vs 355M parameters), needs less memory and runs far faster, while B's extra size gave no accuracy gain here. Latency was measured on a CPU in Colab, so exact times will differ on other machines. Final decision: Model A keeps the champion alias.
+Model A (distilbert-base-uncased-finetuned-sst-2-english) started as the Champion and Model B (siebert/sentiment-roberta-large-english) as the Challenger. On 100 SST-2 validation sentences, A scored a macro-F1 of 0.969 and B scored 0.938, so the Challenger did not improve on the Champion. It was 3.1 percentage points worse, while my rule required it to be at least 2 points better. B was also much slower: 583 ms per sentence against 70 ms for A, about 8 times slower, which breaks my 5x latency guardrail. Either condition alone keeps A as the Champion, so the decision is clear. With only 100 sentences, one sentence is worth 1 point, so a 3-point gap is only about three sentences. That is a small sample, and the gap could shrink or grow on a larger test set. The trade-offs also favour A: it is about five times smaller (roughly 67M vs 355M parameters), needs less memory and runs far faster, while B's extra size gave no accuracy gain here. Latency was measured on a CPU in Colab, so exact times will differ on other machines. Final decision: Model A keeps the champion alias.
 
 
 <!-- DECISION_END -->
